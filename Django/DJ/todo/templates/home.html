@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+<!--  -->
+{% block content %}
+
+<!--  -->
+{% load static %}
+<!--  -->
+{% if user.age > 20 %}
+<h1 style="color: green">{{ user.name }}</h1>
+{% else %}
+<h1 style="color: red">{{ user.name }}</h1>
+{% endif %}
+<button>{{ user.email }}</button>
+
+<p>{{ data }}</p>
+
+{% for i in data %}
+
+<h1>{{ i.username }}</h1>
+<!--  -->
+
+{% endfor %}
+
+<!--  -->
+
+<a href="{% url 'logout' %}">Logout</a>
+
+  {% endblock %}
+</div>

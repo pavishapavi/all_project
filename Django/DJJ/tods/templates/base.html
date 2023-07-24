@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <div class="box">
+      <h1>your logo</h1>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'service'%}">SERVICE</a></li>
+        <li><a href="{% url 'testinomical'%}">TESTINOMICAL</a></li>
+        <li><a href="{% url 'contact'%}">CONTACT</a></li>
+      </ul>
+      <button>sign in</button>
+    </div>
+
+    {% block content %}
+
+    <h1>Base page</h1>
+
+    {% endblock %}
+  </body>
+</html>
